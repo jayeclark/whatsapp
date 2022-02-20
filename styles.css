@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0px 10vw 20px 10vw;
+  background-color: whitesmoke;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 15px;
+  color: white;
+  background-color: #666;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  margin: 5px 0px;
+  padding: 8px;
+}
+
+.user-profile {
+  padding-right: 10px;
+}
+
+#profile-display {
+  width: 100%;
+  padding: 20px 10vw;
+  margin: 0px -10vw;
+  background-color: lightgray;
+}
+
+.login-block {
+  background-color: lightgray;
+  margin: 0px -10vw;
+  padding: 20px 10vw;
+}
+
+.logout-button {
+  border: 1px solid #666;
+  background-color: lightgray;
+  color: #666;
+}
+
+.chat {
+  border: 1px solid gray;
+  border-radius: 2px;
+  width: 80vw;
+  margin: 0px auto;
+  box-sizing: border-box;
+  background-image: url("chat-background.png"); 
+}
+
+.chat-sender {
+  height: 41px;
+  width: calc(100% - 40px);
+  margin: 20px;
+  border-radius: 25px;
+  border: none;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: white;
+  background-image: none;
+  top: -80px;
+  position: relative;
+}
+.chat-viewer {
+   
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 81px;
+  min-height: 500px;
+  max-height: 800px;
+  height: max-content;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.message-lockup {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  justify-content: right;
+}
+
+.sender {
+  width: 100%;
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 5px 0px;
+}
+
+.message {
+  border-radius: 10px;
+  background-color: white;
+  width: max-content;
+  padding: 10px 15px;
+}
+
+.write-button {
+  position: relative;
+  top: -80px;
+  margin: 20px 20px 20px 0px;
+}
