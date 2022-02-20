@@ -1,10 +1,6 @@
 import { process } from './dotenv.js';
 
-Chat();
-
-function Chat() {
-
-  console.log(process.env);
+(function Chat() {
 
   const firebaseConfig = {
     apiKey: process.env('API_KEY'),
@@ -63,7 +59,7 @@ function Chat() {
       if (data) {
         var keys = Object.keys(data);
 
-        keys.slice(keys.length - 10).forEach(function (key) {
+        keys.slice(keys.length - 5).forEach(function (key) {
           console.log(data[key]);
           if (data[key]['sender'] && data[key]['sender'] == currentUserEmail) {
             chat.innerHTML += '<div class="message-lockup" style="justify-content: left;"><div class="sender">' +
@@ -87,6 +83,7 @@ function Chat() {
   // TODO: in this function you should set the userNameDisplay.innerHTML to the passed in userEmail as well as updating the currentUserEmail variable to that same value
   function updateCurrentUser(userEmail) {
     currentUserEmail = userEmail;
+    handleRead();
     userNameDisplay.innerHTML = '<b>' + currentUserEmail + '</b>';
   }
 
@@ -142,4 +139,4 @@ function Chat() {
       })
       .catch((e) => console.warn(e.message));
   });
-};
+})();
